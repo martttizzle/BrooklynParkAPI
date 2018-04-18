@@ -3,28 +3,31 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Brooklyn Park Minnesota</title>
+  <title>Brooklyn Park, Minnesota</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <style>
-  body  {
-     border: 1px solid rgba(0, 0, 0, 0.664); 
-     padding: 1px;
-     color: whitesmoke;
-     text-shadow: rgb(0, 0, 0) 1px .5px;
-     text-align:center;
-  }
-  #title {
-    background-color:green;
-    border: 2px ridge darkgreen;
-  }
-  ol {
-    text-align: left;
-  }
-  </style>
+  <link  type="text/css" src="assets/css/style.css">
 </head>
 
 <body>
   <div class="container">
+      <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+
+
+
+  
   <!-- Retrieved data will be dumped here -->
   <div id="title"  class="city"></div>
   <div class="temp"></div><br>
@@ -41,36 +44,9 @@
 
 
 
-
-
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript">
-   
-    var APIKey = "166a433c57516f51dfab1f7edaed8413"; // This is our API key
-    var queryURL = "https://api.openweathermap.org/data/2.5/weather?" + "q=Brooklyn+Park,US&units=imperial&appid=" + APIKey;// Here we are building the URL we need to query the database
-      
-
-  
-    $.ajax({
-      url: queryURL,
-      method: "GET"
-    }) 
-      .then(function(response) {
-        $(".temp").text("Temperature " +response.main.temp+ " (F)");
-        $(".description").text("Looking out the window: " + response.weather[0].description);
-        $(".city").html("<h1>" + response.name + " Weather Details</h1>");
-        $(".wind").text("Wind Speed: " + response.wind.speed);
-        $(".humidity").text("Humidity: " + response.main.humidity);
-
-        if ( response.main.temp >= 32) {
-          $("body").css("background-color", "rgb(224, 110, 110)")
-        }else{
-          $("body").css("background-color", "rgb(86, 86, 199)")
-        }
-      });
-  </script>
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/javascript/script.js"></script>
 </body>
 
 </html>
