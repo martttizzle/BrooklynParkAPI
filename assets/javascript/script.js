@@ -13,9 +13,9 @@
         $(".wind").text("Wind Speed: " + response.wind.speed);
         $(".humidity").text("Humidity: " + response.main.humidity);
 
-        if ( response.main.temp >= 32) {
-          $("body").css("background-color", "rgb(224, 110, 110)")
-        }else{
-          $("body").css("background-color", "rgb(86, 86, 199)")
-        }
+        // if ( response.main.temp >= 32) {
+        //   $("body").css("background-color", "rgb(224, 110, 110)")
+        // }else{
+        //   $("body").css("background-color", "rgb(86, 86, 199)")
+        // }
       });

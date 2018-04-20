@@ -5,6 +5,11 @@ body  {
     text-shadow: rgb(0, 0, 0) 1px .5px;
     text-align:center;
  }
+  @media only screen and (max-width: 600px) {
+ #ok{
+      background-color: yellow;
+  }
+}
  #title {
    background-color:green;
    border: 2px ridge darkgreen;
@@ -12,3 +17,4 @@ body  {
  ol {
    text-align: left;
  }
+ 
